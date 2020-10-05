@@ -19,8 +19,6 @@ function Banner() {
     fetchData();
   }, []);
 
-  console.log(movie);
-
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   }
@@ -32,6 +30,7 @@ function Banner() {
           backgroundSize: "cover",
           backgroundImage: `url(${baseURL}${movie?.backdrop_path})`,
           backgroundPosition: "center center",
+          backgroundAttachment: "fixed",
         }}
       >
         <div className="banner__contents">
